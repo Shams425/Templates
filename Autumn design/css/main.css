@@ -1,0 +1,691 @@
+/* golbal rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  font-family: sans-serif;
+  perspective: 600px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+pre {
+  font-family: sans-serif;
+}
+:root {
+  --main-color: #9fb93a;
+  --shadow: #cfd0cd;
+}
+.card:hover {
+  transition: all 0.3s ease-out;
+  transform: scale(1.1);
+  box-shadow: -10px 10px 9px var(--shadow);
+}
+/* small screen */
+@media screen and (min-width: 768px) {
+  .continer {
+    width: 750px;
+  }
+}
+/* medium screen */
+@media screen and (min-width: 992px) {
+  .continer {
+    width: 970px;
+  }
+}
+/* large screen */
+@media screen and (min-width: 1200px) {
+  .continer {
+    width: 1170px;
+  }
+}
+
+/* =============================================== header ============================================ */
+header {
+  position: relative;
+}
+header .continer {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 90px;
+  flex-direction: row;
+}
+header .continer .webinfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+}
+header .continer .webinfo .info {
+  flex: 1;
+}
+header .continer .webinfo h1 {
+  margin: 0 0 0 5px;
+  padding: 0;
+}
+header .continer .webinfo h1 span {
+  color: var(--main-color);
+}
+header .continer .webinfo pre {
+  margin: 0 0 0 5px;
+  padding: 0;
+}
+header .continer .navgaiton {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+header .continer .navgaiton ul {
+  display: flex;
+  justify-content: flex-end;
+}
+header .continer .navgaiton .icon {
+  display: none;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding-left: 5px;
+}
+header .continer .navgaiton .icon:hover {
+  border-color: var(--main-color);
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+header .continer .navgaiton .icon span,
+header .continer .navgaiton .icon span::before,
+header .continer .navgaiton .icon span::after {
+  content: "";
+  height: 4px;
+  width: 35px;
+  position: absolute;
+  top: 48%;
+  background-color: #000;
+}
+header .continer .navgaiton .icon:hover span,
+header .continer .navgaiton .icon:hover span::after,
+header .continer .navgaiton .icon:hover span::before {
+  background-color: var(--main-color);
+  transition: all 0.3s ease-in;
+}
+header .continer .navgaiton .icon span::before {
+  top: 10px;
+}
+header .continer .navgaiton .icon span::after {
+  top: -10px;
+}
+.active header .continer .navgaiton .icon span {
+  background-color: transparent;
+}
+.active header .continer .icon span::before,
+.active header .continer .icon span::after {
+  top: 0;
+}
+.active header .continer .icon span::before {
+  transform: rotate(-45deg);
+}
+.active header .continer .icon span::after {
+  transform: rotate(45deg);
+}
+
+header .continer .navgaiton ul li a {
+  color: black;
+  padding: 45px 20px 37px;
+}
+header .continer .navgaiton ul li a:hover {
+  background-color: var(--main-color);
+  transition: all 0.3s ease-out;
+  color: white;
+}
+header .continer .slideMenu {
+  position: absolute;
+  right: -50vw;
+  width: 50vw;
+  top: 90px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.699);
+  z-index: 3;
+}
+header .continer .slideMenu ul {
+  margin: 0;
+  padding: 0;
+}
+header .continer .slideMenu ul li a {
+  color: white;
+  margin: 0;
+  padding: 10px 20px;
+}
+header .continer .slideMenu ul li {
+  padding: 20px 0;
+}
+.active header .continer .slideMenu {
+  right: 0;
+  transition: all 0.3s ease-in;
+}
+.active header .continer .slideMenu ul li:hover {
+  background-color: var(--main-color);
+  padding-left: 20px;
+  transition: all 0.3s ease-out;
+}
+
+/* ========================================= landign section ==================== */
+.landing {
+  display: grid;
+  position: relative;
+  background-color: var(--main-color);
+  height: 300px;
+  align-items: center;
+  padding: 0 40px;
+}
+.landing .left {
+  padding: 10px 10px 10px 17px;
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  background-color: #899a46;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 55px;
+  font-weight: bold;
+}
+.landing .right {
+  padding: 10px 10px 10px 17px;
+  color: white;
+  border: 3px solid white;
+  border-radius: 50%;
+  background-color: #899a46;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 55px;
+  font-weight: bold;
+}
+.landing .info {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  width: 100%;
+  position: relative;
+}
+.landing .info .text {
+  width: 75%;
+}
+.landing .info .image {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+}
+.landing .info .image i:nth-of-type(2) {
+  position: absolute;
+  top: 70px;
+  left: -20px;
+}
+.landing .info .image .vertical {
+  position: absolute;
+  bottom: -25px;
+  left: 70%;
+  transform: rotate(270deg);
+}
+.landing .info .text h2 {
+  color: white;
+  font-size: 40px;
+  width: 100%;
+}
+.top i {
+  border: 5px solid white;
+  padding: 20px;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--main-color);
+  transform: rotate(90deg);
+  margin-top: 50px;
+}
+/* ======================================= Wellcome section ======================== */
+.wellcome {
+  margin: 10px 0;
+  padding: 0 40px;
+}
+.continer {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.wellcome .continer h2 {
+  font-size: 39px;
+  width: 100%;
+}
+.wellcome .continer h2 span {
+  color: var(--main-color);
+}
+.wellcome .continer .cards {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  text-align: center;
+}
+.wellcome .continer .cards .card {
+  padding-top: 20px;
+  width: 190px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.wellcome .cards .card .circle {
+  border: 1px solid #ececec;
+  border-radius: 50%;
+  width: 140px;
+  height: 125px;
+  padding: 20px;
+}
+.wellcome .continer .cards .card i {
+  background-color: var(--main-color);
+  padding: 20px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  font-size: 40px;
+  width: 95px;
+  color: white;
+}
+.wellcome .continer .cards .card h3 {
+  margin-bottom: -10px;
+}
+/* ========================================== portofilo section ========================= */
+.portfolio {
+  margin: 0;
+  position: relative;
+  padding: 0 40px;
+}
+.portfolio header {
+  width: 100%;
+}
+.portfolio header h2 {
+  margin-left: 60px;
+}
+.portfolio header span {
+  color: var(--main-color);
+}
+.portfolio .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 20px;
+}
+.portfolio .cards .card {
+  display: flex;
+  border: 1px solid #ececec;
+  height: 100%;
+  width: 95%;
+}
+.portfolio .cards .card .info {
+  margin-right: 30px;
+}
+.portfolio .cards .card .info p {
+  font-size: 13px;
+}
+.portfolio .cards .card .info h2 {
+  font-size: 15px;
+}
+.portfolio .cards .card .button {
+  display: flex;
+  justify-content: flex-start;
+}
+.portfolio .cards .card .button span {
+  width: 45%;
+  margin: 0 10px 0 0;
+  padding: 10px 10px;
+  height: 30px;
+  border: 1px solid transparent;
+  background-color: var(--main-color);
+  color: white;
+}
+.portfolio .cards .card .button span p {
+  margin: 0;
+}
+.portfolio .cards .card .image {
+  width: 1400px;
+  margin-right: 20px;
+}
+.portfolio .cards .card img {
+  width: 100%;
+  height: 100%;
+}
+
+/* =================================================== advertieses ================================== */
+.advertisers {
+  position: relative;
+  padding: 0 40px;
+}
+.advertisers header h2 span {
+  color: var(--main-color);
+  position: relative;
+}
+.advertisers .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+.advertisers .cards .card {
+  width: 100%;
+  height: 100%;
+}
+.advertisers .cards .card img {
+  width: 100%;
+  height: 150px;
+  margin-right: 5px;
+}
+
+/* ============================================== footer ===================== */
+footer {
+  margin-top: 30px;
+  width: 100%;
+  padding: 0;
+}
+footer h3 {
+  font-size: 25px;
+}
+footer a {
+  color: rgb(97, 97, 97);
+}
+footer .upper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 20px;
+}
+.about,
+.archives,
+.contact,
+.sign {
+  width: 100%;
+  height: 90%;
+}
+footer .about .info {
+  width: 60%;
+}
+footer .about span {
+  font-weight: bold;
+}
+footer .about .info p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 35px 0;
+}
+footer .about i {
+  margin-right: 10px;
+  color: var(--shadow);
+}
+footer .archives p {
+  border-bottom: 1px solid var(--shadow);
+  padding: 6% 0px;
+  width: 90%;
+}
+footer .contact .all-compont {
+  display: flex;
+  flex-direction: column;
+}
+footer .contact .all-compont .compont {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+footer .contact .compont:not(:last-of-type) {
+  margin-bottom: 30%;
+}
+footer .contact .compont i:last-of-type {
+  margin-right: 10px;
+}
+footer .contact p {
+  display: inline;
+  margin: 10px;
+  font-size: 15px;
+  flex: 1;
+}
+footer .sign p {
+  border-bottom: 1px solid var(--shadow);
+  padding: 20px 0;
+  width: 90%;
+}
+footer .sign .sup {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+footer .sign input {
+  border: none;
+  border-bottom: 1px solid #000;
+  margin: 10px 0;
+  width: 80%;
+}
+footer .sign .sup-button {
+  width: 150px;
+  height: 50px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 16px;
+  margin: 50px 35px 0 0;
+}
+footer .lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 5px 10px 10px;
+  border-bottom: 15px solid var(--shadow);
+}
+footer .copy {
+  margin: 0 40px;
+}
+footer .lower nav ul {
+  display: flex;
+}
+footer .lower nav ul li a {
+  padding: 21px 30px 27px 25px;
+}
+footer .lower nav ul li a:hover {
+  transition: all 0.3s ease-out;
+  background-color: var(--main-color);
+  color: white;
+}
+footer .lower .copy {
+  color: var(--shadow);
+}
+
+/* ========================================= R.W.D =============================== */
+@media screen and (max-width: 1190px) {
+  .landing .info .text h2 {
+    font-size: 30px;
+  }
+  footer h3 {
+    font-size: 20px;
+  }
+  footer .about .info p {
+    font-size: 15px;
+  }
+  footer .contact p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .landing .info .image {
+    display: none;
+  }
+  .landing .info .text {
+    width: 260%;
+    padding: 0 0 0 50%;
+  }
+  .landing .info .text h2 {
+    font-size: 20px;
+    height: 135px;
+    width: 100%;
+    margin: 0;
+    padding: 60px 0px;
+  }
+  header .continer .navgaiton ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+  }
+  footer .upper {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  header .continer .navgaiton .icon {
+    display: block;
+    font-size: 35px;
+  }
+  footer .contact .compont {
+    flex-direction: column;
+  }
+  footer .contact .compont:not(:last-of-type) {
+    margin-bottom: 8%;
+  }
+}
+@media screen and (max-width: 790px) {
+  .wellcome .continer .cards {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    align-items: center;
+  }
+  .landing {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .landing .info {
+    flex-direction: column;
+  }
+  .landing .info .text h2 {
+    font-size: 20px;
+    height: 135px;
+    width: 100%;
+  }
+  header .continer .navgaiton {
+    flex-direction: column;
+  }
+  .head .continer .navgaiton .bars:hover .head {
+    height: 250px;
+  }
+  .head .continer .navgaiton .bars:hover + ul {
+    display: flex;
+  }
+  .head .continer .navgaiton .bars:hover html {
+    background-color: #2d2d2d;
+  }
+
+  header .continer .navgaiton ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+  }
+  header .continer .navgaiton ul li a {
+    padding: 15px 0;
+  }
+  header .continer .navgaiton ul li a:hover {
+    padding-left: 25px;
+    background-color: transparent;
+  }
+
+  footer .contact p {
+    font-size: 12px;
+  }
+  footer .sign .sup {
+    justify-content: center;
+  }
+  footer .lower .navgiation nav {
+    display: none;
+  }
+  footer .lower .copy {
+    padding: 15px 40px;
+    font-size: 22px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 540px) {
+  header .continer .webinfo h1 {
+    font-size: 32px;
+  }
+  header .continer .webinfo pre {
+    font-size: 10px;
+  }
+  header .continer .webinfo h1 span {
+    font-size: 25px;
+  }
+  .landing .info .image {
+    display: none;
+  }
+  .landing .info .text h2 {
+    font-size: 13px;
+    width: 100%;
+  }
+  .landing .info .image i {
+    font-size: 65px;
+  }
+  .landing .info .image i:nth-of-type(2) {
+    position: absolute;
+    top: 15px;
+    left: -20px;
+  }
+  .landing .right {
+    font-size: 15px;
+    padding: 5px;
+    padding-left: 10px;
+    border-radius: 50%;
+    right: 29px;
+    width: 30px;
+  }
+  .landing .left {
+    font-size: 15px;
+    padding: 5px;
+    padding-left: 8px;
+    border-radius: 50%;
+    right: 29px;
+    width: 30px;
+  }
+  .wellcome .continer h2 {
+    font-size: 17px;
+  }
+  .wellcome .continer .cards .card .circle {
+    border: 1px solid #ececec;
+    border-radius: 50%;
+    width: 110px;
+    height: 105px;
+    padding: 20px;
+  }
+  .portfolio .continer .cards .card .info p {
+    font-size: 8px;
+  }
+  .wellcome .continer .cards .card i {
+    font-size: 21px;
+    width: 69px;
+  }
+  .wellcome .continer .cards {
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  }
+  .wellcome .continer .cards .card {
+    width: 115px;
+  }
+}

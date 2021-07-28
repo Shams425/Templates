@@ -1,0 +1,714 @@
+/* golbal rules */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+:root{
+    --main-color: #fff;
+    --secondery-color: #515151;
+    --third-color: #c2c2c2;
+    --fourth-color: #a6a6a6;
+    --pg_padding: 40px;  
+}
+html {
+    scroll-behavior:smooth ;
+    overflow-x: hidden;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color:black;
+}
+body {
+    background-color: #ebebeb;
+    font-family: "Arial";
+    margin: 0;
+    padding: 0;
+}
+
+/* ====================================== header ========================= */
+header {
+    width: 100%;
+    height:200px;
+    margin: 0
+}
+header .head{
+    background-color: var(--secondery-color);
+    color: var(--main-color);
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .head ul li a {
+    color: #ababab;
+    padding: 45px 20px 24px;
+}
+header .head ul li a:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #5e94dc;
+}
+.head .info {
+    display: flex;
+    justify-content: center;
+    padding:10px var(--pg_padding) 15px;
+}
+header .bars {
+    display: flex;
+    transform: translateY(25%);
+    padding:10px var(--pg_padding) 15px;
+}
+header .bars nav ul{
+    display: flex;
+    justify-content: center;
+} 
+.head  h1 {
+    font-size:55px;
+    margin:0;
+    padding: 0
+}
+header .bars nav ul li:not(:last-child) {
+    padding-right: 35px;
+    
+}
+header .bars nav ul li {
+    font-size: 20px; 
+    color: var(--main-color);
+}
+/* ================================== landing section ================ */
+.landing {
+    margin-bottom: 30px;
+    padding: 0;
+    position: relative;
+    bottom: 65px;
+}
+.continer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 var(--pg_padding);
+    margin: 0;
+    height: 600px;
+}
+.continer .image {
+    border: 1px solid transparent;
+    background-color: #e0e0e0;
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+}
+.continer .image header {
+    background-color: balck;
+    display: flex;
+    justify-content: space-between;
+    background-color: #c3c3c3;
+    height: 30px;
+    padding-left: 20px;
+    width: 100%;
+}
+.continer .image p {
+    background-color: green;
+    color: white;
+    border: 1px solid transparent;
+    padding: 2px;
+    padding-left:4px ;
+    border-radius: 3px;
+    width: 100px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    left: calc(100% - 100px);
+}
+.continer .image span {
+    display: block;
+    background-color: #c2c2c2;
+    margin-bottom: 20px;
+    margin-left: 25px;
+}
+
+.continer .image .shp1 {
+    margin-top: 30px;
+    width: 190px;
+    height: 70px;
+}
+.continer .image .shp2 {
+    margin-bottom: 20px ;
+    width: calc(100% - 55px);
+    height: 50px
+}
+.continer .image .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 100%;
+    width: calc(100% - 55px);
+}
+.continer .image .footer .shp3 {
+    width: 45%;
+    height: 58%
+}
+.continer .image .footer .right {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 0;
+    height: 100%;
+}
+.continer .image .footer .right span {
+    background-color: var(--fourth-color);
+    width: 100%;
+    height: 40px;
+    margin-bottom: 3px;
+}
+.continer .image .footer .right span:last-child {
+    width: 65%
+}
+.continer .info {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    background-color: #e0e0e0;
+    border: 1px solid transparent;
+    padding: 0;
+    width: 44%
+}
+.continer .info .head {
+    height: 70%;
+    
+
+}
+.continer .info h2 {
+    font-size: 88px;
+    padding: 10px 40px 10px 20px;
+}
+.continer .info p {
+    font-size: 52px;
+    color: #919191;
+    margin-bottom: 20px;
+    padding: 10px 40px 10px 20px
+}
+.continer .info .foot {
+    height: 100%;
+    margin-top: 20px;
+}
+.continer .info input {
+    background-color: #549a42;
+    width: 100%;
+    height: 80%;
+    margin-top: 30px;
+    color: white;
+    font-size: 45px;
+}
+/* ============================================================== icons section =========================== */
+.icons {
+    display: flex;
+    padding: var(--pg_padding);
+    width:100%
+}
+.icons .icon {
+    display: flex;
+    width: 25%;
+    margin: 10px;
+    margin-top: 50px;
+    padding: 10px;
+}
+.icons .icon i {
+    font-size: 120px;
+    margin-right: 30px;
+    height: 100%;
+    color: #ababab;
+}
+.icons .icon p {
+    font-size: 18px;
+    color: #ababab;
+}
+.icons .icon h2 {
+    font-size: 20px;
+    color: #5d5d5d;
+}
+/*============================================================= about section ===================================== */
+.about {
+    display: flex;
+    padding: var(--pg_padding);
+    justify-content: space-between;
+}
+.about .websites {
+    width: 45%;
+    margin-top: 20px;
+}
+.about .websites h2 {
+    margin-bottom: 8px;
+}
+.about .websites .links {
+    width: 50%
+}
+.about .websites .links a {
+    color: #5e94dc;
+    font-size: 25px;
+}
+.about .websites .links .text {
+    width: 100%;
+}
+.about .websites .links p {
+    color: #ababab;
+    position: relative;
+    font-size: 24px;
+    left: calc(100% - 245px);
+}
+.about .websites p:last-child {
+    padding-right: 18px;
+}
+
+.about .users {
+    width: 45%
+}
+.about .users h2 {
+    font-size: 150px;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+.about .users p {
+    text-align: right;
+    color: #ababab;
+}
+
+/* ====================================================== footer ==================================== */
+footer {
+    width: 100%;
+    background-color: var(--secondery-color);
+    padding: var(--pg_padding);
+    display: flex;
+    justify-content: space-between;
+    max-height: 40px;
+    border-bottom: 10px solid #a6a6a6;
+    position: absolute;
+}
+footer .navgation ul {
+    display: flex;
+}
+footer .navgation ul li a {
+    padding:40px 30px 23px;
+    color: #a6a6a6;
+}
+footer .navgation ul li a:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #5e94dc;
+}
+footer .contact p {
+    color: #a6a6a6;
+}
+
+/* ================================================================ R.W.D ======================================== */
+@media (max-width: 1680px) {
+    .about .websites .links p {
+        left: calc(100% - 190px);
+    }
+}
+@media (max-width: 1660px) {
+    .continer .info h2 {
+        font-size: 72px;
+    }
+    .continer .info p {
+        font-size: 50px;
+    }
+    .about .websites .links a {
+        font-size: 20px
+    }
+    .about .websites .links {
+        width :50%
+    }
+    .about .websites .links p {
+        font-size: 17px;
+        left: calc(100% - 200px);
+    }
+    .about .users h2 {
+        font-size: 120px;
+    }
+    .icons .icon p {
+        font-size: 13px;
+    }
+    .icons .icon h2 {
+        font-size: 16px; 
+    }
+    .icons .icon i {
+        font-size: 80px;
+    }
+}
+@media (max-width: 1400px) {
+    .continer .info h2 {
+        font-size: 65px;
+    }
+    .continer .info p {
+        font-size: 53px;
+    }
+    .about .websites .links a {
+        font-size: 20px
+    }
+    .about .websites .links p {
+        font-size: 15px;
+        left: calc(100% - 125px);
+    }
+    .about .users h2 {
+        font-size: 110px;
+    }
+    .icons .icon i {
+        font-size: 80px;
+    }
+    .icons .icon p {
+        font-size: 13px;
+    }
+    .icons .icon h2 {
+        font-size: 16px; 
+    }
+    .icons .icon i {
+        font-size: 80px;
+    }
+    .continer .info input {
+        height: 60%;
+        margin-top: 80px;
+    }
+    
+}
+@media (max-width: 1290px) {
+    .continer .info h2 {
+        font-size: 62px;
+    }
+    .continer .info p {
+        font-size: 45px;
+    }
+    .about .websites .links a {
+        font-size: 17px
+    }
+    .about .websites .links p {
+        font-size: 17px;
+
+    }
+    .about .users h2 {
+        font-size: 90px;
+    }
+    .icons .icon i {
+        font-size: 70px;
+    }
+    .icons .icon p {
+        font-size: 11px;
+    }
+    .icons .icon h2 {
+        font-size: 16px; 
+    }
+}
+@media (max-width: 1240px) {
+    .continer {
+        height: 400px
+    }
+    .continer .info h2 {
+        font-size: 46px;
+    }
+    .continer .info p {
+        font-size: 35px;
+    }
+    .about .websites {
+        margin-top: 10px;
+    }
+    .about .websites .links a {
+        font-size: 14px
+    }
+    .about .websites .links p {
+        font-size: 14px;
+
+    }
+    .about .users h2 {
+        font-size: 70px;
+    }
+    .icons .icon i {
+        font-size: 60px;
+    }
+    .icons .icon p {
+        font-size: 11px;
+    }
+    .icons .icon h2 {
+        font-size: 12px; 
+    }
+    .section .continer .image span {
+        height: 30px
+    }
+    .continer .info input {
+        height: 80%;
+        margin-top: 20px;
+    }
+    .continer .image .footer .right {
+        height: 30%
+    }
+}
+@media (max-width: 1024px) {
+    .continer .info h2 {
+        font-size: 45px;
+    }
+
+    .icons .icon i {
+        font-size: 50px;
+    }
+    .icons .icon h2 {
+        font-size: 10px
+    }
+}
+@media (max-width: 970px) {
+    .continer .info h2 {
+        font-size: 40px;
+    }
+    .continer .info p {
+        font-size: 30px;
+    }
+    .icons {
+        flex-direction: column;
+    }
+    .icons .icon {
+        width: 100%;
+    }
+    .icons .icon i {
+        font-size: 80px;
+    }
+    .icons .icon h2 {
+        font-size: 30px
+    }
+    .icons .icon p {
+        font-size: 25px;
+    }
+    .about .websites .links a {
+        font-size: 11px;
+    }
+    .about .websites .links p {
+        font-size: 10px;
+        left: calc(100% - 79px);
+    }
+}
+@media (min-width: 770px) {
+    .head .bars i {
+        display: none;
+    }
+}
+@media (max-width: 770px) {
+    .head .bars {
+        transform: none;
+        width: 100%;
+        justify-content: flex-end;
+    }
+    .head .bars i {
+        font-size: 45px;
+    }
+    .head .bars  ul {
+        display: none;
+    }
+    .landing .continer {
+        display: block;
+    }
+    .continer .image {
+        width: 70%;
+        height: 70%;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .continer .image header {
+        position: absolute;
+        z-index: 2;
+        height: 30px;
+    }
+    .continer .image p {
+        position: absolute;
+        left: calc(100% - 70px);
+        z-index: 1;
+        top: 30px;
+        font-size: 15px;
+        width: 70px;
+    }
+    .continer .image .shp1 {
+        width: 60px;
+        height: 25px;
+        position: absolute;
+        top: 20px;
+    }
+    .continer .image .shp2 {
+    height: 22px;
+    position: absolute;
+    top: 85px;
+    }
+    .continer .image .footer {
+    height: 100%;
+    width: calc(100% - 55px);
+    position: absolute;
+    top: 96px;
+    }
+    .continer .info {
+        width: 70%;
+        height: 68%;
+        margin-bottom: 30px;
+    }
+    .continer .info h2 {
+        font-size: 23px;
+    }
+    .continer .info p {
+        font-size: 24px;
+    }
+    .continer .info input {
+    height: 80%;
+    margin-top: 20px;
+    font-size: 30px;
+    }
+    .icons {
+        flex-direction: column;
+        margin-top: 65px;
+    }
+    .icons .icon {
+        width: 100%
+    }
+    .icons .icon i {
+        font-size: 60px;
+    }
+    .icons .icon i:nth-of-type(3) {
+        margin: 0 23px;
+    }
+    .icons .icon h2 {
+        font-size: 20px
+    }
+    .icons .icon p {
+        font-size: 19px;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .about .websites {
+        width: 100%;
+    }
+    .about .websites .links a {
+        font-size: 19px;
+    }
+    .about .websites .links p {
+        font-size: 14px;
+        left: calc(100% - 180px);
+    }
+    .about .websites .links {
+        width: 100%;
+    }
+    .about .websites h2 {
+        font-size: 23px;
+    }
+    .about .users h2 {
+        margin-top: 20px;
+    }
+    footer .navgation {
+        display: none;
+    }
+    footer .contact {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    } 
+}
+@media (max-width: 380px) {
+    .head h1 {
+        font-size: 30px;
+    }
+    .head .bars i {
+        font-size: 30px;
+    }
+    .landing .continer {
+        display: block;
+    }
+    .continer .image {
+        width: 100%;
+        height: 50%;
+        margin-bottom: 20px;
+        position: relative;
+    }
+    .continer .image header {
+        position: absolute;
+        z-index: 2;
+        height: 30px;
+    }
+    .continer .image p {
+        position: absolute;
+        left: calc(100% - 70px);
+        z-index: 1;
+        top: 30px;
+        font-size: 15px;
+        width: 70px;
+    }
+    .continer .image .shp1 {
+        width: 60px;
+        height: 25px;
+        position: absolute;
+        top: 20px;
+    }
+    .continer .image .shp2 {
+    height: 22px;
+    position: absolute;
+    top: 85px;
+    }
+    .continer .image .footer {
+    height: 100%;
+    width: calc(100% - 55px);
+    position: absolute;
+    top: 96px;
+    }
+    .continer .info {
+        width: 100%
+    }
+    .continer .info h2 {
+        font-size: 32px;
+    }
+    .continer .info p {
+        font-size: 24px;
+    }
+    .icons .icon {
+        width: 100%
+    }
+
+    .icons .icon i {
+        font-size: 50px;
+    }
+    .icons .icon i:nth-of-type(3) {
+        margin: 0 23px;
+    }
+    .icons .icon h2 {
+        font-size: 15px
+    }
+    .icons .icon p {
+        font-size: 13px;
+    }
+    .icons {
+        flex-direction: column;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .about .websites {
+        width: 100%;
+    }
+    .about .users h2 {
+        font-size: 50px;
+    }
+    .about .websites .links a {
+        font-size: 18px;
+    }
+    .about .websites .links p {
+        font-size: 12px;
+        left: calc(100% - 103px);
+    }
+    .about .users {
+        margin-top: 20px;
+        width: 100%;
+    }
+    footer .navgation {
+        display: none;
+    }
+    footer .contact {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }   
+}

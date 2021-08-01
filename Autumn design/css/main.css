@@ -107,39 +107,34 @@ header .continer .navgaiton .icon:hover {
   transition: all 0.3s ease-in;
   cursor: pointer;
 }
-header .continer .navgaiton .icon span,
-header .continer .navgaiton .icon span::before,
-header .continer .navgaiton .icon span::after {
-  content: "";
+header .continer .navgaiton .icon span {
   height: 4px;
   width: 35px;
   position: absolute;
   top: 48%;
   background-color: #000;
 }
-header .continer .navgaiton .icon:hover span,
-header .continer .navgaiton .icon:hover span::after,
-header .continer .navgaiton .icon:hover span::before {
+header .continer .navgaiton .icon:hover span {
   background-color: var(--main-color);
   transition: all 0.3s ease-in;
 }
-header .continer .navgaiton .icon span::before {
+header .continer .navgaiton .icon span:first-of-type {
   top: 10px;
 }
-header .continer .navgaiton .icon span::after {
-  top: -10px;
+header .continer .navgaiton .icon span:last-of-type {
+  top: 75%;
 }
-.active header .continer .navgaiton .icon span {
+.active header .continer .navgaiton .icon span:nth-of-type(2) {
   background-color: transparent;
 }
-.active header .continer .icon span::before,
-.active header .continer .icon span::after {
-  top: 0;
+.active header .continer .icon span:first-of-type,
+.active header .continer .icon span:last-of-type {
+  top: 50%;
 }
-.active header .continer .icon span::before {
+.active header .continer .icon span:first-of-type {
   transform: rotate(-45deg);
 }
-.active header .continer .icon span::after {
+.active header .continer .icon span:last-of-type {
   transform: rotate(45deg);
 }
 

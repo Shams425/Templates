@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grad School HTML5 Template</title>
+        <!-- font awsome liberary -->
+        <link rel="stylesheet" href="css/all.min.css">
+        <!-- normilze file -->
+        <link rel="stylesheet" href="css/normaliz.css">
+        <!-- main css file -->
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <h1><span>GRAD</span> SCHOOL</h1>
+            </div>
+            <div class="navigation">
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li id= "mainSub"><a href="#about">About Us</a>
+                            <ul class= "submenu">
+                                <li><a href="#">Who are we?</a></li>
+                                <li><a href="#">How we work?</a></li>
+                                <li><a href="#">What we do?</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#course">Courses</a></li>
+                        <li><a href="#more">More Info</a></li>
+                        <li><a href="#contact">Contacat</a></li>
+                    </ul>
+                    <div class="icons">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="slideMenu" id="links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li id= "slideSub"><a href="#about">About Us</a>
+                    <ul class= "submenu">
+                        <li><a href="#">Who are we?</a></li>
+                        <li><a href="#">How we work?</a></li>
+                        <li><a href="#">What we do?</a></li>
+                    </ul>
+                </li>
+                <li><a href="#course">Courses</a></li>
+                <li><a href="#more">More Info</a></li>
+                <li><a href="#contact">Contacat</a></li>
+            </ul>
+        </div>
+        <!-- ========================================== landing ====================== -->
+        <section class= "landing" id= "home">
+            <video muted autoplay loop>
+                <source src="images/course-video.mp4" type="video/mp4">
+            </video>
+            <div class="overlay">
+                <div class="info">
+                    <p>GRADUATE SCHOOL OF MANAGEMENT</p>
+                    <h1><span>YOUR</span> CLASSROOM</h1>
+                    <button>DISCOVER MORE</button>
+                </div>
+            </div>
+            <div class="feature1">
+                <div class="titel">
+                    <i class= "fas fa-pen"></i>
+                    <div class="text">
+                        <h2>ALL COURSES</h2>
+                    </div>
+                </div>
+                <div class="title-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptates nulla optio maxime doloremque sint accusantium architecto repellat commodi aperiam modi quaerat temporibus molestias a perferendis enim quia natus? Quia?<br>
+                    <a href="#moreInfo">MORE INFO.</a><br>
+                    <hr>
+                </div>
+            </div>
+            <div class="feature2">
+                <div class="titel">
+                    <i class= "fas fa-school"></i>
+                    <div class="text">
+                        <h2>VIRTUAL CLASS</h2>
+                    </div>
+                    
+                </div>
+                <div class="title-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptates nulla optio maxime doloremque sint accusantium architecto repellat commodi aperiam modi quaerat temporibus molestias a perferendis enim quia natus? Quia?<br>
+                    <a href="#moreInfo">MORE INFO.</a><br>
+                    <hr>
+                </div>
+            </div>
+            <div class="feature3">
+                <div class="titel">
+                    <i class= "fas fa-book"></i>
+                    <div class="text">
+                        <h2>REAL MEETING</h2>
+                    </div>
+                </div>
+                <div class="title-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, voluptates nulla optio maxime doloremque sint accusantium architecto repellat commodi aperiam modi quaerat temporibus molestias a perferendis enim quia natus? Quia?<br>
+                    <a href="#moreInfo">MORE INFO.</a><br>
+                    <hr>
+                </div>
+            </div>
+            
+        </section>
+        <!-- ====================================================== features section ============================================= -->
+        <section class= "features" id= "about">
+            <div class="continer">
+                <div class="specialheaddig">
+                    <span class= "line"></span>
+                     <div class="section-titel">
+                        <h2>Why choose Grad School?</h2> 
+                     </div> 
+                 </div>
+                <div class="features-titel">
+                    <div class="feature active" id= "cardNum1">
+                        <h3 class="title" data-target= "#cardNum1" data-number= "0">BEST EDUCATION</h3>
+                        <div class="square1" id= "square1">
+                            <div class= "innerSquare1" id= "innerSquare1"></div>
+                        </div>
+                    </div>
+                    <div class="feature" id= "cardNum2">
+                        <h3 class= "title" data-target= "#cardNum2" data-number= "1">TOP MANAGEMENT</h3>
+                        <div class="square2" id= "square2">
+                            <div class= "innerSquare2"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="feature" id= "cardNum3">
+                        <h3 class= "title" data-target= "#cardNum3" data-number= "2">QUALTIY MEETING</h3>
+                        <div class="square3" id= "square3">
+                            <div class= "innerSquare3"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-figure active">
+                    <div class="images">
+                        <img src="images/choose-us-image-01.png" alt="a big leacture hall with studants">
+                    </div>
+                    <div class="info">
+                        <h2>Best Education</h2>
+                        <p>Grad School is free educational HTML Template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial puproses. You may want to make<a href= "https://www.TemplateMO.com"> a littel donation</a> to TemplateMO. <br>Please tell you friends about us. Thank you.</p>
+                    </div>
+                </div>
+                <div class="features-figure">
+                    <div class="images">
+                        <img src="images/choose-us-image-02.png" alt="a big leacture hall with studants">
+                    </div>
+                    <div class="info">
+                        <h2>TopLevel</h2>
+                        <p>You can modify this HTML layout by editing contents and adding more pages as you need. Since this template has options to add dropdown menus, you can put many HTML pages. <br>Suspendisse tincidunt, nagna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
+                    </div> 
+                </div>
+                <div class="features-figure">
+                    <div class="images">
+                        <img src="images/choose-us-image-03.png" alt="a big leacture hall with studants">
+                    </div>
+                    <div class="info">
+                        <h2>Quality Meeting</h2>
+                        <p>You are NOT allowed to redistuibute this template ZIP file on any template collection website. However, upi can use this tempate to convert into a specific theme for and kind of CMS platform such as QordPress. For more information, you shall<a href="https://www.TemplateMO.com"> contact TemplateMo </a>now.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- =========================================================================== About us section ========================================================== -->
+        <section class= "aboutUs">
+            <div class="continer">
+                <div class="sectionInfo">
+                    <div class="course">
+                        <div class="info">
+                            <p>Take <span>any online course</span> and win $326 for your next class</p>
+                        </div>
+                        <div class="cards">
+                            <div class="card1">
+                                <p class= "numbers" id= "days"></p>
+                                <p class= "meassure">DAYS</p>
+                            </div>
+                            <div class="card2">
+                                <p class= "numbers" id= "hours"></p>
+                                <p class= "meassure">HOURS</p>
+                            </div>
+                            <div class="card3">
+                                <p class= "numbers" id= "minutes"></p>
+                                <p class= "meassure">MINUTES</p>
+                            </div>
+                            <div class="card4">
+                                <p class= "numbers" id= "seconds"></p>
+                                <p class= "meassure">SECONDS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form">
+                        <form action="">
+                            <div class="header">
+                                <p>Register your free account and <strong>get immediate</strong> access to online courses</p>
+                            </div>
+                            <div class="input">
+                                <input type="text" name= "Name" placeholder= "Your Name">
+                                <input type="email" name= "Email" id="" placeholder= "Your Email">
+                                <input type="tel" name="Telphone" id="" placeholder= "Telphone Number">
+                                <div class="button">
+                                   <button class= "getIt">GET IT NOW</button> 
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- =========================================================================== Course section ========================================================== -->
+        <section class= "choose" id= "course">
+            <div class="specialheaddig">
+                <span class= "line"></span>
+                 <div class="section-titel">
+                    <h2>Choose Your Course</h2> 
+                 </div> 
+             </div>
+            <div class="cards" id= "cardContiner">
+                <div class="card" id= "card1">
+                    <div class="image">
+                        <img src="images/courses-01.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="data">
+                           <h2>COMMUINCATIONs</h2>
+                           <P>Download free images and videos for yor websites by visiting Unsplash. Pixbay and Pexels</P> 
+                        </div>
+                        <div class="author">
+                            <div class="profile">
+                                <img src="images/author-01.png" alt="">
+                            </div>
+                            <div class="link">
+                                <a href="#">Free</a>
+                                <i class= "fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id= "card2">
+                    <div class="image">
+                        <img src="images/courses-02.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="data">
+                           <h2>Digital Marketing</h2>
+                           <P>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</P> 
+                        </div>
+                        <div class="author">
+                            <div class="profile">
+                                <img src="images/author-02.png" alt="">
+                            </div>
+                            <div class="link">
+                                <a href="#">Free</a>
+                                <i class= "fas fa-angle-double-right"></i>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="card" id= "card3">
+                    <div class="image">
+                        <img src="images/courses-03.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="data">
+                            <h2>Business World</h2>
+                            <P>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</P>
+                        </div>
+                        <div class="author">
+                            <div class="profile">
+                                <img src="images/author-03.png" alt="">
+                            </div>
+                            <div class="link">
+                                <a href="#">Free</a>
+                                <i class= "fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id= "card4">
+                    <div class="image">
+                        <img src="images/courses-04.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="data">
+                          <h2>Media Technology</h2>
+                            <P>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</P>  
+                        </div>
+                        <div class="author">
+                            <div class="profile">
+                                <img src="images/author-04.png" alt="">
+                            </div>
+                            <div class="link">
+                                <a href="#">Free</a>
+                                <i class= "fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <div class="card" id= "card5">
+                    <div class="image">
+                        <img src="images/courses-01.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="data">
+                            <h2>Business Ethics</h2>
+                            <P>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</P>  
+                        </div>
+                        <div class="author">
+                            <div class="profile">
+                                <img src="images/author-02.png" alt="">
+                            </div>
+                            <div class="link">
+                                <a href="#">Free</a>
+                                <i class= "fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id= "card6">
+                    <div class="image">
+                        <img src="images/courses-02.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="data">
+                           <h2>Photography</h2>
+                           <P>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</P> 
+                        </div>
+                        <div class="author">
+                            <div class="profile">
+                                <img src="images/author-01.png" alt="">
+                            </div>
+                            <div class="link">
+                                <a href="#">Free</a>
+                                <i class= "fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                <div class="card" id= "card7">
+                    <div class="image">
+                        <img src="images/courses-03.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="data">
+                            <h2>Web Development</h2>
+                            <P>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</P>
+                        </div>
+                        <div class="author">
+                            <div class="profile">
+                                <img src="images/author-03.png" alt="">
+                            </div>
+                            <div class="link">
+                                <a href="#">Free</a>
+                                <i class= "fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id= "card8">
+                    <div class="image">
+                        <img src="images/courses-04.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="data">
+                            <h2>Learn HTML CSS</h2>
+                            <P>You can get free images and videos for your websites by visiting Unsplash, Pixabay, and Pexels.</P> 
+                        </div>
+                        <div class="author">
+                            <div class="profile">
+                                <img src="images/author-04.png" alt="">
+                            </div>
+                            <div class="link">
+                                <a href="#">Free</a>
+                                <i class= "fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id= "card9">
+                    <div class="image">
+                        <img src="images/courses-05.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="data">
+                            <h2>Social Media</h2>
+                            <P>Pellentesque ultricies diam magna, auctor cursus lectus pretium nec. Maecenas finibus lobortis enim.</P> 
+                        </div>
+                        <div class="author">
+                            <div class="profile">
+                                <img src="images/author-05.png" alt="">
+                            </div>
+                            <div class="link">
+                                <a href="#">Free</a>
+                                <i class= "fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id= "card10">
+                    <div class="image">
+                        <img src="images/courses-01.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="data">
+                            <h2>Digital Arts</h2>
+                            <P>Quisque cursus augue ut velit dictum, quis volutpat enim blandit. Maecenas a lectus ac ipsum porta.</P> 
+                        </div>
+                        
+                        <div class="author">
+                            <div class="profile">
+                                <img src="images/author-05.png" alt="">
+                            </div>
+                            <div class="link">
+                                <a href="#">Free</a>
+                                <i class= "fas fa-angle-double-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======================================= moreInfo section ================================== -->
+        <section class= "more-info" id= "more">
+            <div class="continer">
+                <div class="info">
+                    <p>OUR PRESENTATION IS FOR YOU</p>
+                    <h2>Watch the video to learn more <span id= "first">about Grad School</span></h2>
+                    <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However,you can use this template ot convert into a specific theme for any kind of CMS platform such as WordPress. You may <span>contact TemplateMO</span> for details.</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus architecto velit totam, odio consequuntur omnis repellendus iusto similique! Exercitationem porro excepturi voluptatum sint, illo ipsum suscipit reiciendis. Suscipit, tempora sit.</p>
+                    <br>
+                    <button type= "submit">External URL</button>
+                </div>
+                <div class="card">
+                    <div class="overlay"></div>
+                    <div class="image">
+                        <img src="images/main-thumb.png" alt="">
+                        <div class="info">
+                            <h2>POWER HTML TEMPLATE</h2>
+                            <i class= "fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ==================================== contact ============================== -->
+        <section class= "contact" id= "contact">
+            <div class="specialheaddig">
+               <span class= "line"></span>
+                <div class="section-titel">
+                   <h2>Let's Keep In touch</h2> 
+                </div> 
+            </div> 
+            <div class= "continer">
+                <div class="personalInfo">
+                    <form action="">
+                        <div class="header">
+                            <input type="text" name="" id="" placeholder="Your Name">
+                            <input type="email" name="" id="" placeholder="Your Email">
+                        </div>
+                        <textarea name="" id="" cols="30" rows="10" placeholder= "Your message..."></textarea>
+                        <button type= "submit">SEND MESSAGE NOW</button>
+                    </form>
+                </div>
+                <div class="map">
+                    <iframe src="http://www.googlemaps.com" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+        <!-- =============================== footer =========================== -->
+        <footer>
+            <p><small>&copy; ALL RIGHT RESERVED GRAD SCHOOL 2020 | <span>TEMPLATEMO DESIGN</span></small></p>
+        </footer>
+        <script src= "js/main.js"></script>
+    </body>
+</html>

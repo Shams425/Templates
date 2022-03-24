@@ -1,0 +1,303 @@
+/***********************
+*** hero section  
+************************/
+#meetingHero {
+  background-image: url(../img/heading-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+#meetingHero .container {
+  position: relative;
+  top: 50%;
+}
+
+#meetingHero .heading {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+#meetingHero .heading h1 {
+  font-size: 40px;
+}
+
+#meetingHero .heading h4 {
+  font-size: 20px;
+}
+
+/***********************
+*** Gallery section  
+************************/
+#gallery {
+  background-image: url(../img/meetings-page-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 100px 0 20px 0;
+}
+
+#gallery .container {
+  flex-direction: column;
+}
+
+#gallery .container .filterButtons {
+  display: flex;
+  justify-content: center;
+}
+
+#gallery .container .filterButtons button {
+  background-color: var(--fifthColor);
+  color: var(--secondColor);
+  margin-right: 15px;
+}
+
+#gallery .container .filterButtons .active {
+  background-color: var(--secondColor);
+  color: var(--fifthColor);
+}
+
+#gallery .container .filteredCards .show {
+  height: 300px;
+  width: 30%;
+  transform: scale(1);
+  transition: all 0.7s ease;
+  /* opacity: 1; */
+  display: block;
+}
+
+#gallery .container .filteredCards .hide {
+  max-height: 1px;
+  max-width: 1px;
+  transform: scale(0);
+  transition: all 0.7s ease;
+  /* opacity: 0; */
+  display: none;
+}
+
+.card {
+  margin: 10px;
+  padding: 0;
+  min-height: 300px;
+  background-color: var(--fifthColor);
+  width: 30%;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  transition: all 0.7s ease;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-right: 5px;
+  margin: 15px 0;
+}
+
+.bottom .info {
+  flex: 1;
+}
+
+.top {
+  position: relative;
+  height: 50%;
+}
+.top img {
+  width: 100%;
+  object-fit: cover;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+.top .price {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 15px;
+  background-color: wheat;
+  color: var(--mainColor);
+  border-radius: 20px;
+  font-weight: bold;
+}
+.card h3 {
+  color: var(--secondColor);
+  margin: 20px 13px 0 13px;
+}
+.card h2 {
+  font-size: 15px;
+  margin: 20px 13px 0 13px;
+}
+.card p {
+  font-size: 14px;
+  margin-left: 13px;
+}
+
+.filteredCards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#gallery .numberButtons {
+  display: flex;
+  justify-content: center;
+}
+
+#gallery .numberButtons button {
+  background-color: var(--fifthColor);
+  width: 40px;
+  height: 40px;
+  color: #000;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+#gallery .numberButtons button i {
+  color: black;
+}
+
+#gallery .numberButtons .active {
+  background-color: var(--secondColor);
+  color: var(--fifthColor);
+}
+
+/***********************
+*** Meeting Details page  
+************************/
+#details {
+  background-image: url(../img/meetings-page-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 0;
+}
+
+#details .container {
+  flex-direction: column;
+  padding: 0 50px;
+}
+
+#details .card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+#details .card .top {
+  height: 30%;
+}
+
+#details .price {
+  top: 50px;
+  left: 50px;
+}
+
+#details .date {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  background-color: rgba(247, 247, 247, 0.9);
+  border-radius: 15px;
+  text-align: center;
+  padding-right: 10px;
+  color: #000;
+}
+
+#details .body {
+  padding: 0 30px;
+  margin: 30px 0;
+}
+
+#details .meetingTitle {
+  margin-top: 15px;
+}
+
+#details .meetingTitle h2 {
+  font-size: 25px;
+  margin: 25px 35px 0;
+}
+
+#details .meetingTitle p {
+  font-size: 20px;
+  border-bottom: 1px solid rgb(56, 56, 56, 0.15);
+  padding-bottom: 25px;
+  margin: 15px 35px 0;
+}
+
+#details .body p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+#details .body p:last-child {
+  border-bottom: 1px solid rgb(61, 61, 61, 0.3);
+}
+
+#details .cardFooter {
+  margin: 30px 0;
+}
+
+#details .cardFooter span {
+  color: black;
+}
+
+#details .cardFooter span:first-child {
+  font-size: 23px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+#details .card .meetingData {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-right: 70px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgb(61, 61, 61, 0.3);
+  border-top: 1px solid rgb(61, 61, 61, 0.3);
+}
+
+#details .card .meetingData .title {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+#details .card .meetingData p {
+  border: none;
+}
+
+#details .backButton {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#details .backButton button {
+  width: 40%;
+  padding: 20px 10px;
+}
+
+@media (max-width: 760px) {
+  #gallery .card {
+    width: 45%;
+  }
+  #gallery .filterButtons {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 568px) {
+  #gallery .card {
+    width: 100%;
+    height: 100%;
+  }
+  #gallery .filterButtons button {
+    width: 100px;
+    padding: 5px 8px !important;
+    font-size: 12px;
+    border-radius: 15px;
+  }
+}

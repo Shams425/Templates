@@ -1,0 +1,443 @@
+/* Global rules */
+html {
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+p,
+a {
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.h2 {
+  font-size: 40px;
+}
+
+.h3 {
+  font-size: 28px;
+}
+
+.light-300 {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 300;
+}
+
+.regular-400 {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 400;
+}
+.semi-bold-600 {
+  font-family: "Open Sans", sans-serif !important;
+  font-weight: 600;
+}
+
+.typo-space-line::after,
+.typo-space-line-center::after {
+  content: "";
+  width: 150px;
+  display: block;
+  position: absolute;
+  border-bottom: 5px solid #6266ea;
+  padding-top: 0.5em;
+}
+
+.typo-space-line-center::after {
+  left: 50%;
+  margin-left: -75px;
+}
+.container-fluid {
+  padding: 0;
+}
+
+button:hover a {
+  color: white !important;
+}
+
+.comment {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 5px 20px 5px 50px;
+  border-left: 1px solid #6267ea8c;
+  background-color: rgba(219, 219, 219, 0.13);
+}
+
+.work,
+.requirements {
+  border-bottom: 1px solid #6267ea8c;
+  margin: 50px 0;
+  padding-bottom: 20px;
+}
+/****************************
+******* header
+*****************************/
+header ul li {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+header .dropdown {
+  margin-top: 8px;
+}
+
+/****************************
+******* home section
+*****************************/
+#home {
+  position: relative;
+}
+#home .container-fluid {
+  padding: 0;
+}
+#home .imageSlider {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+#home .imageSlider img {
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
+
+#home .owl-dots {
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+}
+
+#home .owl-dots button {
+  margin-right: 20px;
+  width: 50px;
+  height: 3px;
+  background-color: rgba(105, 105, 105, 0.5);
+  transition: all 0.3s ease;
+}
+
+#home .owl-dots button.active {
+  background-color: white;
+}
+
+#home .owl-nav button {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  color: white;
+  font-size: 100px;
+  opacity: 0.5;
+}
+
+#home .owl-nav button:hover {
+  opacity: 1;
+}
+
+#home .owl-nav button:nth-of-type(2) {
+  left: 97.5%;
+}
+
+#home .textInfo {
+  width: 100%;
+}
+#home .textInfo p {
+  line-height: 1.9;
+  margin: 20px 0;
+}
+
+/****************************
+******* services section
+*****************************/
+
+#services .project img {
+  height: 300px;
+  margin-bottom: 50px;
+  object-fit: cover;
+}
+
+.service-work.card {
+  border-radius: 10px !important;
+  cursor: pointer;
+}
+.service-work .service-work-vertical {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 33.33%,
+    rgba(255, 255, 255, 1) 66.66%,
+    rgba(255, 255, 255, 0) 99.99%
+  );
+  background-size: 300% 300%;
+  background-position: 0% 100%;
+  transition: 0.5s;
+}
+.service-work .service-work-vertical:hover {
+  background-position: 0% 0%;
+  transition: 0.5s;
+}
+.service-work .service-work-vertical:hover * {
+  color: #000;
+  border-color: #000;
+  transition: 0.5s;
+}
+/****************************
+******* work section
+*****************************/
+#work .card img {
+  height: 400px;
+  margin-bottom: 50px;
+  object-fit: cover;
+}
+
+.recent-work.card {
+  border-radius: 10px !important;
+}
+
+.recent-work .recent-work-vertical {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 33.333%,
+    rgba(97, 84, 199, 1) 66.666%,
+    rgba(255, 255, 255, 0) 99.999%
+  );
+  background-size: 300% 300%;
+  background-position: 0% 100%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.recent-work .recent-work-vertical:hover {
+  background-position: 0% 0%;
+  transition: 0.5s;
+}
+
+.recent-work .recent-work-vertical:hover div.recent-work-content {
+  top: 50%;
+  margin-top: -2.5em;
+  position: absolute;
+}
+
+.recent-work .recent-work-vertical:hover * {
+  color: white;
+  transition: 0.5s;
+}
+/****************************
+******* brand section
+*****************************/
+#Brands .brand {
+  margin: 50px;
+}
+
+/****************************
+******* contact section
+*****************************/
+#contact iframe {
+  padding-left: 50px;
+}
+
+/****************************
+******* sharja work page
+*****************************/
+#home .work img {
+  width: 100%;
+  object-fit: cover;
+  margin: 0 50px 50px 0;
+}
+
+#home .work .info {
+  padding-left: 20px;
+  line-height: 2;
+}
+
+#home .title h1 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+#home .work .info p {
+  font-size: 20px;
+}
+
+#home .work .info h4 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+#home .work a {
+  margin: 50px 0;
+}
+
+#home .requirements ol li {
+  margin: 30px 0;
+}
+
+/****************************
+******* ajman work page
+*****************************/
+.ajman-home .container {
+  margin: 50px auto;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #6267ea8c;
+}
+.ajman-home img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.ajman-home .title h1 {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.ajman-home .buttons {
+  width: 100%;
+  margin-top: 50px;
+}
+
+/****************************
+******* trainer section
+*****************************/
+#trainer .container .row {
+  margin: 100px auto;
+}
+
+#trainer .container img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+}
+
+#trainer .info p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/****************************
+******* dubai home section
+*****************************/
+#Dubai-home .title {
+  position: relative;
+  min-height: 300px;
+  margin: 50px 0;
+}
+
+#Dubai-home .title img {
+  width: 600px;
+  object-fit: cover;
+}
+
+#Dubai-home .title h1 {
+  position: absolute;
+  bottom: 0%;
+}
+
+#Dubai-home .container .info {
+  margin: 10px 0 50px;
+}
+/****************************
+******* feedback page
+*****************************/
+#Feed_home form {
+  border: 1px solid rgba(172, 172, 172, 0.3);
+  padding: 30px;
+}
+#Feed_home img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+/****************************
+******* menu-safe page
+*****************************/
+#safe-home .title img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+/****************************
+******* feedback page
+*****************************/
+#gov-home ul li {
+  margin: 20px 0;
+}
+
+#gov-home .title img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+#gov-home .brands img {
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+}
+
+#gov-home .brands img:first-of-type,
+#gov-home .brands img:last-of-type {
+  width: 100px;
+  height: 100px;
+}
+
+/****************************
+******* Trane the Trainer page
+*****************************/
+#TTT-home .cards {
+  border-bottom: 1px solid #6267ea8c;
+}
+
+#TTT-home .card {
+  border-radius: 20px;
+  box-shadow: 2px 8px 20px rgba(82, 82, 82, 0.322);
+}
+#TTT-home .card-body {
+  padding: 0;
+}
+#TTT-home .card img {
+  width: 100%;
+  max-height: 30%;
+  object-fit: cover;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+#TTT-home .card .master {
+  height: 325px;
+}
+
+#TTT-home .card p {
+  font-size: 15px;
+}
+
+#TTT-home .card .text {
+  margin-bottom: 60px;
+}
+
+/****************************
+******* footer section
+*****************************/
+footer {
+  padding-top: 100px;
+}
+
+footer i {
+  margin: 30px 30px 30px 0;
+  font-size: 30px;
+}
+
+footer .company i,
+footer .work i {
+  margin: 10px;
+  font-size: 20px;
+}
+
+footer .work {
+  margin: 0;
+}

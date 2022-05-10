@@ -16,11 +16,11 @@
     />
 
     <!-- external library -->
-    <link rel="stylesheet" href="assets/css/all.min.css" />
-    <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/aos.css" />
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
     <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
 
     <!-- main css file -->
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -31,7 +31,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.html">
             <img src="assets/img/logo.png" alt="" />
           </a>
           <button
@@ -51,21 +51,21 @@
           >
             <ul class="navbar-nav mt-2 mt-lg-0">
               <li class="nav-item active">
-                <a class="nav-link" href="#"
+                <a class="nav-link" href="#hero"
                   >Home <span class="visually-hidden">(current)</span></a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#services">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link" href="#testimonial">Newsletter</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Newsletter</a>
+                <a class="nav-link" href="#pricing">Pricing</a>
               </li>
             </ul>
             <button class="btn" type="submit">
@@ -83,7 +83,7 @@
         <img src="assets/img/slider-left-dec.png" alt="" />
       </div>
       <div class="container">
-        <div class="leftSide">
+        <div class="leftSide" data-aos="fade-right">
           <div class="title">
             <h1>Get The latest App From App Stores</h1>
             <p>
@@ -97,12 +97,13 @@
             </div>
           </div>
         </div>
-        <div class="rightSide">
+        <div class="rightSide" data-aos="fade-left">
           <img src="assets/img/slider-dec.png" alt="" />
         </div>
       </div>
     </section>
 
+    <!-- services section -->
     <section id="services">
       <div class="background">
         <img src="assets/img/services-right-dec.png" alt="" />
@@ -122,7 +123,7 @@
           </p>
         </div>
         <div class="cardsContainer d-flex flex-wrap">
-          <div class="serviceCard col-lg-3 col-md-6">
+          <div class="serviceCard col-lg-3 col-md-6" data-aos="fade-up">
             <div class="icon">
               <img src="assets/img/service-icon-01.png" alt="" />
               <img src="assets/img/service-icon-hover-01.png" alt="" />
@@ -134,7 +135,7 @@
             </p>
             <a href="#">Read More</a>
           </div>
-          <div class="serviceCard col-lg-3 col-md-6">
+          <div class="serviceCard col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <div class="icon">
               <img src="assets/img/service-icon-02.png" alt="" />
               <img src="assets/img/service-icon-hover-02.png" alt="" />
@@ -146,7 +147,7 @@
             </p>
             <a href="#">Read More</a>
           </div>
-          <div class="serviceCard col-lg-3 col-md-6">
+          <div class="serviceCard col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
             <div class="icon">
               <img src="assets/img/service-icon-03.png" alt="" />
               <img src="assets/img/service-icon-hover-03.png" alt="" />
@@ -158,7 +159,7 @@
             </p>
             <a href="#">Read More</a>
           </div>
-          <div class="serviceCard col-lg-3 col-md-6">
+          <div class="serviceCard col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="600">
             <div class="icon">
               <img src="assets/img/service-icon-04.png" alt="" />
               <img src="assets/img/service-icon-hover-04.png" alt="" />
@@ -182,7 +183,7 @@
     <!-- about section  -->
     <section id="about">
       <div class="container d-flex flex-wrap">
-        <div class="leftColumn col-lg-6 col-md-12">
+        <div class="leftColumn col-lg-6 col-md-12" data-aos="fade-right">
           <div class="title">
             <h1>About <span>what we do</span> & who we are</h1>
             <ul>
@@ -231,7 +232,7 @@
           </button>
           <label for="Text">*No Credit Card Required</label>
         </div>
-        <div class="rightColumn col-lg-6 col-md-12">
+        <div class="rightColumn col-lg-6 col-md-12" data-aos="fade-left">
           <img src="assets/img/about-right-dec.png" alt="" />
           <img
             class="backgroundImg"
@@ -258,69 +259,59 @@
           </p>
         </div>
         <div class="commentsData d-flex flex-wrap">
-          <div class="leftSide col-lg-6 col-md-12">
-            <div class="comment active">
-              <a href="#">
-                <div class="info">
-                  <h3>David Martin</h3>
-                  <p>30 November 2021</p>
-                </div>
-                <div class="job">
-                  <p>Financial Apps</p>
-                </div>
-                <p>4.8</p>
-              </a>
+          <div class="leftSide col-lg-6 col-md-12" data-aos="fade-right">
+            <div class="comment  active" data-number="0">
+              <div class="info">
+                <h3 class="name">David Martin</h3>
+                <p>30 November 2021</p>
+              </div>
+              <div class="job">
+                <p class="jobTitle">Financial Apps</p>
+              </div>
+              <p>4.8</p>
             </div>
-            <div class="comment">
-              <a href="#">
-                <div class="info">
-                  <h3>Jake Harris Nyo</h3>
-                  <p>29 November 2021</p>
-                </div>
-                <div class="job">
-                  <p>Digital Business</p>
-                </div>
-                <p>4.5</p>
-              </a>
+            <div class="comment" data-number="1">
+              <div class="info">
+                <h3 class="name">Jake Harris Nyo</h3>
+                <p>29 November 2021</p>
+              </div>
+              <div class="job">
+                <p class="jobTitle">Digital Business</p>
+              </div>
+              <p>4.5</p>
             </div>
-            <div class="comment">
-              <a href="#">
-                <div class="info">
-                  <h3>May Catherina</h3>
-                  <p>24 November 2021</p>
-                </div>
-                <div class="job">
-                  <p>Businesses & Economic</p>
-                </div>
-                <p>4.7</p>
-              </a>
+            <div class="comment" data-number="2">
+              <div class="info">
+                <h3 class="name">May Catherina</h3>
+                <p>24 November 2021</p>
+              </div>
+              <div class="job">
+                <p class="jobTitle">Businesses & Economic</p>
+              </div>
+              <p>4.7</p>
             </div>
-            <div class="comment">
-              <a href="#">
-                <div class="info">
-                  <h3>Random User</h3>
-                  <p>27 November 2021</p>
-                </div>
-                <div class="job">
-                  <p>New App Ecosystems</p>
-                </div>
-                <p>3.9</p>
-              </a>
+            <div class="comment" data-number="3">
+              <div class="info">
+                <h3 class="name">Random User</h3>
+                <p>27 November 2021</p>
+              </div>
+              <div class="job">
+                <p class="jobTitle">New App Ecosystems</p>
+              </div>
+              <p>3.9</p>
             </div>
-            <div class="comment">
-              <a href="#">
-                <div class="info">
-                  <h3>Mark Amber Do</h3>
-                  <p>21 November 2021</p>
-                </div>
-                <div class="job">
-                  <p>Web Development</p>
-                </div>
-                <p>4.3</p>
-              </a>
+            <div class="comment" data-number="4">
+              <div class="info">
+                <h3 class="name">Mark Amber Do</h3>
+                <p>21 November 2021</p>
+              </div>
+              <div class="job">
+                <p class="jobTitle">Web Development</p>
+              </div>
+              <p>4.3</p>
             </div>
           </div>
-          <div class="rightSide col-lg-6 col-md-12">
+          <div class="rightSide col-lg-6 col-md-12" data-aos="fade-left">
             <div class="commentDetails">
               <img src="assets/img/quote.png" alt="" width="100" />
               <q>
@@ -333,11 +324,11 @@
             <div class="person">
               <img src="assets/img/client-image.jpg" alt="" />
               <div class="info">
-                <h2>David Martin</h2>
-                <p>CEO Of David Company</p>
+                <h2 class="showName">David Martin</h2>
+                <p class="showPosition">CEO Of David Company</p>
               </div>
               <div class="job"></div>
-            </div>
+            </div class="jobTitle">
           </div>
         </div>
       </div>
@@ -359,7 +350,7 @@
         </div>
         <div class="priceCards">
           <div class="row d-flex">
-            <div class="priceCard card1 col-lg-4 col-md-12">
+            <div class="priceCard card1 col-lg-4 col-md-12" data-aos="fade-up">
               <div class="overlay"></div>
               <img class="top" src="assets/img/pro-table-top.png" alt="" />
               <img
@@ -384,7 +375,7 @@
                 <a href="#"> Purchases This Plan </a>
               </button>
             </div>
-            <div class="priceCard card2 col-lg-4 col-md-12">
+            <div class="priceCard card2 col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="200">
               <div class="overlay"></div>
               <img class="top" src="assets/img/pro-table-top.png" alt="" />
               <img
@@ -409,7 +400,7 @@
                 <a href="#"> Purches This Plan </a>
               </button>
             </div>
-            <div class="priceCard card3 col-lg-4 col-md-12">
+            <div class="priceCard card3 col-lg-4 col-md-12" data-aos="fade-up" data-aos-delay="400">
               <div class="overlay"></div>
               <img class="top" src="assets/img/pro-table-top.png" alt="" />
               <img
@@ -455,7 +446,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="link col-lg-3 col-md-6 col-sm-12">
+          <div class="link col-lg-3 col-md-6 col-sm-12" data-aos="fade-up">
             <h2>Contact Us</h2>
             <ul>
               <li>Rio de Janeiro - RJ, 22795-008, Brazil</li>
@@ -465,7 +456,7 @@
               <li>info@company.com</li>
             </ul>
           </div>
-          <div class="link col-lg-3 col-md-6 col-sm-12">
+          <div class="link col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="200">
             <h2>About Us</h2>
             <div class="linkList">
               <ul>
@@ -498,7 +489,7 @@
               </ul>
             </div>
           </div>
-          <div class="link col-lg-3 col-md-6 col-sm-12">
+          <div class="link col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="400">
             <h2>Useful Links</h2>
             <div class="linkList">
               <ul>
@@ -531,9 +522,11 @@
               </ul>
             </div>
           </div>
-          <div class="link col-lg-3">
+          <div class="link col-lg-3 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="600">
             <h2>About out Company</h2>
-            <img src="assets/img/white-logo.png" alt="" />
+            <img class="whiteLogo" src="assets/img/white-logo.png" alt="" />
+            <img class="logo" src="assets/img/logo.png" alt="" />
+
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore.

@@ -75,10 +75,13 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100px;
-  background-color: transparent;
+  min-height: 80px;
+  background-color: white;
   border-bottom: 1px solid rgba(92, 92, 92, 0.15);
-  padding: 25px 0;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  z-index: -1;
 }
 
 header .container {
@@ -100,6 +103,10 @@ header .btn {
   padding: 5px 10px;
 }
 
+.navbar {
+  flex: 1;
+}
+
 .btn i {
   width: max-content;
   flex: 1;
@@ -112,11 +119,20 @@ header .btn {
   font-size: 15px !important;
 }
 
+@media screen and (max-width: 990px) {
+  header {
+    position: fixed;
+    z-index: 999;
+  }
+}
+
 /************************** 
 *** hero section 
 ***************************/
 #hero {
   position: relative;
+  margin-bottom: 100px;
+  min-height: 300px;
 }
 
 #hero img {
@@ -125,11 +141,15 @@ header .btn {
   background-attachment: fixed;
 }
 
+#hero .title p {
+  color: white;
+}
+
 #hero .leftSide,
 #hero .rightSide {
   position: absolute;
   top: 40%;
-  width: 45%;
+  width: 40%;
 }
 
 #hero .rightSide {
@@ -162,6 +182,37 @@ header .btn {
   margin-right: 20px;
   border-radius: 20px;
   padding: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  #hero .leftSide h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #hero .leftSide {
+    left: 2%;
+    width: 50%;
+  }
+  #hero .leftSide h1 {
+    font-size: 20px;
+  }
+  #hero .leftSide p {
+    font-size: 10px;
+  }
+  #hero .leftSide button {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #hero .background {
+    display: none;
+  }
+  #hero .title p {
+    color: var(--lightText);
+  }
 }
 
 /************************** 
@@ -200,7 +251,6 @@ header .btn {
   margin: 15px;
   border: 1px solid rgba(80, 80, 80, 0.2);
   box-shadow: 0px 0px 15px rgba(80, 80, 80, 0.2);
-  transition: all 0.4s ease;
   overflow: hidden;
   width: 22%;
 }
@@ -399,12 +449,13 @@ header .btn {
   padding-right: 30px;
 }
 
-#testimonial .leftSide .comment a {
+#testimonial .leftSide .comment {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   margin: 30px 0;
   color: #000;
+  cursor: pointer;
 }
 #testimonial .leftSide .info {
   margin-right: 20px;
@@ -415,12 +466,12 @@ header .btn {
   width: 100%;
 }
 
-#testimonial .leftSide .active a h3,
-#testimonial .leftSide .active a p:nth-child(3) {
+#testimonial .leftSide .active h3,
+#testimonial .leftSide .active p:nth-child(3) {
   color: var(--mainColor);
 }
 
-#testimonial .leftSide .comment a p {
+#testimonial .leftSide .comment p {
   color: var(--lightText);
 }
 
@@ -484,14 +535,14 @@ header .btn {
   position: relative;
   border-radius: 50px;
   margin-top: 100px;
+  margin-right: 20px;
   border: 1px solid rgba(90, 90, 90, 0.2);
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
-  transform: scale(0.9);
-  transition: all 0.3s ease;
+  overflow: hidden;
+  width: 30%;
 }
 
 #pricing .priceCard:hover {
@@ -584,10 +635,17 @@ header .btn {
   width: 100%;
 }
 
+@media (max-width: 1200px) {
+  #pricing .priceCard {
+    width: 45%;
+  }
+}
+
 @media (max-width: 990px) {
   #pricing .priceCard {
     display: flex !important;
     flex-wrap: wrap !important;
+    width: 100%;
   }
 }
 
@@ -649,6 +707,10 @@ footer .link {
   padding-right: 20px;
 }
 
+footer .link .logo {
+  display: none;
+}
+
 footer .linkList {
   display: flex;
   flex-wrap: wrap;
@@ -690,6 +752,10 @@ footer .link img {
 }
 
 @media (max-width: 991px) {
+  footer {
+    background-image: none;
+  }
+
   footer .title .subscribe {
     flex-direction: column;
   }
@@ -702,10 +768,18 @@ footer .link img {
     color: var(--mainColor) !important;
     border: 1px solid rgba(59, 59, 59, 0.445);
     border-radius: 50px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  footer .title .subscribe button:hover {
+    background-color: var(--mainColor) !important;
+    color: white !important;
   }
 
   footer .title .subscribe input::placeholder {
     color: var(--mainColor) !important;
+    text-align: left;
   }
 
   footer .title h1 {
@@ -716,5 +790,19 @@ footer .link img {
 
   footer .linkList ul {
     width: 100%;
+  }
+
+  footer .link,
+  footer .link ul,
+  footer .link ul li a {
+    color: black;
+  }
+
+  footer .link .whiteLogo {
+    display: none;
+  }
+
+  footer .link .logo {
+    display: block;
   }
 }

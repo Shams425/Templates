@@ -37,7 +37,6 @@ const autoMove = setInterval(autoSlide, 5000);
 function autoSlide() {
   if (index >= imgContainer.children.length - 1) return;
   index++;
-  console.log(index);
   imgContainer.style.transform = `translateX(${-imgWidth * index}px)`;
   imgContainer.style.transition = `all 0.7s ease-in`;
 }

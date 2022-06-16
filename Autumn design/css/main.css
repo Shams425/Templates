@@ -178,7 +178,7 @@ header .continer .slideMenu ul li {
   transition: all 0.3s ease-out;
 }
 
-/* ========================================= landign section ==================== */
+/* ========================================= landing section ==================== */
 .landing {
   display: grid;
   position: relative;
@@ -253,7 +253,7 @@ header .continer .slideMenu ul li {
   transform: rotate(90deg);
   margin-top: 50px;
 }
-/* ======================================= Wellcome section ======================== */
+/* ======================================= Welcome section ======================== */
 .wellcome {
   margin: 10px 0;
   padding: 0 40px;
@@ -362,9 +362,10 @@ header .continer .slideMenu ul li {
 .portfolio .cards .card img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
-/* =================================================== advertieses ================================== */
+/* =================================================== advertises ================================== */
 .advertisers {
   position: relative;
   padding: 0 40px;
@@ -387,6 +388,7 @@ header .continer .slideMenu ul li {
   width: 100%;
   height: 150px;
   margin-right: 5px;
+  object-fit: cover;
 }
 
 /* ============================================== footer ===================== */

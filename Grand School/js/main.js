@@ -1,37 +1,43 @@
 //slide Menu
-const icons = document.querySelectorAll(".icons span"); 
-const slideMenu = document.querySelector(".icons")
+const icons = document.querySelectorAll(".icons span");
+const slideMenu = document.querySelector(".icons");
 const links = document.getElementById("links");
 const mainSub = document.getElementById("mainSub");
 const slideSub = document.getElementById("slideSub");
-const slideLinks = document.querySelectorAll(".slideMenu li:not(:nth-of-type(2))")
+const slideLinks = document.querySelectorAll(
+  ".slideMenu li:not(:nth-of-type(2))"
+);
 
 slideMenu.addEventListener("click", () => {
-    document.body.classList.toggle("active");
-    links.style.transition = `all 0.3s ease-in`;
+  document.body.classList.toggle("active");
+  links.style.transition = `all 0.3s ease-in`;
 });
 
 slideLinks.forEach((link) => {
-    link.addEventListener("click" , () => {
-        document.body.classList.remove("active")
-    })
-})
-slideSub.addEventListener("click" , () => {
-    slideSub.classList.toggle("second");
-})
-mainSub.addEventListener("click" , () => {
-    mainSub.classList.toggle("first");
-})
+  link.addEventListener("click", () => {
+    document.body.classList.remove("active");
+  });
+});
+slideSub.addEventListener("click", () => {
+  slideSub.classList.toggle("second");
+});
+mainSub.addEventListener("click", () => {
+  mainSub.classList.toggle("first");
+});
 window.onclick = (el) => {
-  if (!el.target.matches("header") && !el.target.matches(".icons") 
-  && !el.target.matches("span") && el.target.matches(".slideMenu li:not(:nth-of-type(2))")){
+  if (
+    !el.target.matches("header") &&
+    !el.target.matches(".icons") &&
+    !el.target.matches("span") &&
+    el.target.matches(".slideMenu li:not(:nth-of-type(2))")
+  ) {
     document.body.classList.remove("active");
   }
   if (!el.target.matches("#slideSub") && !el.target.matches("#mainSub")) {
     slideSub.classList.remove("second");
     mainSub.classList.remove("first");
   }
-}
+};
 
 // show and hide cards
 const titles = document.querySelectorAll(".title");
@@ -41,31 +47,31 @@ let picNumer;
 
 titles.forEach((title) => {
   title.addEventListener("click", () => {
-      picNumer = title.getAttribute("data-number");
-      features.forEach((feature) => {
-        feature.classList.remove("active");
-      })
-      document.querySelector(title.dataset.target).classList.add("active");
-      pictures.forEach((picture) => {
-        picture.classList.remove("active");
-        pictures[picNumer].classList.add("active");
-      })
-  })
-})
+    picNumer = title.getAttribute("data-number");
+    features.forEach((feature) => {
+      feature.classList.remove("active");
+    });
+    document.querySelector(title.dataset.target).classList.add("active");
+    pictures.forEach((picture) => {
+      picture.classList.remove("active");
+      pictures[picNumer].classList.add("active");
+    });
+  });
+});
 
-//  countDown 
+//  countDown
 const seconds = document.getElementById("seconds");
 const minutes = document.getElementById("minutes");
 const hours = document.getElementById("hours");
 const days = document.getElementById("days");
-let countDown = setInterval(Timecounter , 1000);
+let countDown = setInterval(TimeCounter, 1000);
 
-function Timecounter ()  {
-  let t = Date.parse(new Date().getFullYear() + 1) - Date.parse(new Date());
-  seconds.innerHTML = Math.floor((t / 1000) % 60);
-  minutes.innerHTML = Math.floor((t / 1000 / 60) % 60);
-  hours.innerHTML = Math.floor((t / (1000 * 60 * 60)) % 24);
-  days.innerHTML= Math.floor(t / (1000 * 60 * 60 * 24));
+function TimeCounter() {
+  let time = Date.parse(new Date().getFullYear() + 1) - Date.parse(new Date());
+  seconds.innerHTML = Math.floor((time / 1000) % 60);
+  minutes.innerHTML = Math.floor((time / 1000 / 60) % 60);
+  hours.innerHTML = Math.floor((time / (1000 * 60 * 60)) % 24);
+  days.innerHTML = Math.floor(time / (1000 * 60 * 60 * 24));
 }
 
 // moving the cards
@@ -74,6 +80,8 @@ const allSlides = document.querySelectorAll(".choose .cards .card");
 const slidesLength = allSlides.length;
 const slideWidth = allSlides[0].offsetWidth;
 let cardIndex = 0;
+
+// make infinte loop to the cards
 
 let index = 0;
 let posX1;
@@ -114,22 +122,20 @@ function dragMove(e) {
 }
 function dragEnd() {
   finalPosition = slides.offsetLeft;
-  if (finalPosition - initialPosition < -slideWidth/2) {
+  if (finalPosition - initialPosition < -slideWidth / 2) {
     switchSlide("next", "dragging");
-  } else if (finalPosition - initialPosition > slideWidth/2) {
+  } else if (finalPosition - initialPosition > slideWidth / 2) {
     switchSlide("prev", "dragging");
   } else {
     slides.style.left = `${initialPosition}px`;
   }
   document.onmouseup = null;
   document.onmousemove = null;
-  console.log(posX1);
-  console.log(posX2);
 }
 
 function switchSlide(arg, arg2) {
   slides.classList.add("transition");
-  for(i = 0; i < allSlides.length; i++) {
+  for (i = 0; i < allSlides.length; i++) {
     let change = allSlides[i];
     allSlides[i + 1] = allSlides[i];
     allSlides[i] = change;
@@ -144,7 +150,7 @@ function switchSlide(arg, arg2) {
     } else {
       slides.style.left = `${initialPosition + slideWidth}px`;
       // firstSlide = allSlides[allSlides.length - 1].cloneNode(true);
-      slides.insertBefore(allSlides[1],firstSlide);
+      slides.insertBefore(allSlides[1], firstSlide);
     }
   }
   canISlide = false;
@@ -163,15 +169,14 @@ function checkIndex() {
   canISlide = true;
 }
 let cardAry = [];
-  for(i = 0; i < allSlides.length; i++) {
-    cardAry.push(allSlides[i]);
-  }
+for (i = 0; i < allSlides.length; i++) {
+  cardAry.push(allSlides[i]);
+}
 setInterval(() => {
-  for(i = 0; i < allSlides.length; i++) {
+  for (i = 0; i < allSlides.length; i++) {
     let change = cardAry[i];
     cardAry[i + 1] = cardAry[i];
     cardAry[i] = change;
   }
-},1000)
+}, 1000);
 console.log(cardAry);
-

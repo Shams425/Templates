@@ -193,8 +193,43 @@
 
         <!-- buy button -->
         <button class="productButton">Buy Now!!</button>
+
+        <!-- payment modal -->
+      </div>
+      <div class="payment">
+        <h1 class="payTitle">Personal Information</h1>
+        <label for="">Name and Surname</label>
+        <input type="text" placeholder="John Doe" class="payInput" />
+        <label for="">Phone Number</label>
+        <input type="text" placeholder="+1 234 567 89" class="payInput" />
+        <label for="">Address</label>
+        <input type="text" placeholder="Elton St 21 22" class="payInput" />
+
+        <h1 class="payTitle">Card Information</h1>
+        <div class="cardIcons">
+          <img src="./assets/img/visa.png" width="40" class="cardIcon" alt="" />
+          <img
+            src="./assets/img/master.png"
+            width="40"
+            class="cardIcon"
+            alt=""
+          />
+        </div>
+        <input type="password" class="payInput" placeholder="card Number" />
+        <div class="cardInfo">
+          <input type="text" placeholder="mm" class="payInput sm" />
+          <input type="text" placeholder="yyyy" class="payInput sm" />
+          <input type="text" placeholder="cvv" class="payInput sm" />
+        </div>
+
+        <button class="payButton">Check out !!</button>
+
+        <span class="close">&cross;</span>
       </div>
     </section>
+
+    <!-- Gallery section start -->
+    <section id="gallery"></section>
 
     <script src="assets/js/main.js"></script>
   </body>

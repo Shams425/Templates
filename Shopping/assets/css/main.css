@@ -209,3 +209,80 @@ header nav {
   width: 50%;
   height: 100px;
 }
+
+/****************************** 
+*** product section  
+******************************/
+#product {
+  height: 100vh;
+  background-color: whitesmoke;
+  position: relative;
+  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+  padding-top: 60px;
+}
+
+.productImg {
+  width: 50%;
+}
+
+.productDetails {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 40%;
+  padding: 50px;
+}
+
+.productTitle {
+  font-size: 75px;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+.productDesc {
+  color: gray;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.colors,
+.sizes {
+  display: flex;
+  margin: 20px 0;
+}
+
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: black;
+}
+
+.color:last-of-type {
+  background-color: darkblue;
+}
+
+.size {
+  padding: 5px 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.productButton {
+  float: right;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.productButton:hover {
+  background-color: white;
+  color: black;
+}

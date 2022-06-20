@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -374,4 +378,119 @@ header nav {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+/****************************** 
+*** gallery section  
+******************************/
+#gallery {
+  padding: 50px;
+  display: flex;
+}
+
+.galleryItem {
+  flex: 1;
+  padding: 50px;
+}
+
+.galleryImg {
+  width: 100%;
+}
+
+/****************************** 
+*** new sesson section  
+******************************/
+#newSesson {
+  display: flex;
+}
+
+.nsItem {
+  flex: 1;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nsImg {
+  width: 100%;
+  height: 500px;
+}
+
+.nsTitle {
+  font-size: 40px;
+}
+
+.nsButton {
+  cursor: pointer;
+  padding: 15px;
+  font-weight: 600;
+}
+
+/****************************** 
+*** footer  
+******************************/
+footer {
+  display: flex;
+}
+
+.leftSide {
+  flex: 6;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.fMenuTitle {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.fMenuList {
+  list-style: none;
+  padding: 0;
+}
+
+.ListItem {
+  margin-bottom: 10px;
+  color: gray;
+  cursor: pointer;
+}
+
+.rightSide {
+  flex: 6;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fInput {
+  padding: 5px;
+}
+
+.fbutton {
+  padding: 5px;
+  background-color: black;
+  color: white;
+}
+
+.fIcons {
+  display: flex;
+}
+
+.fIcon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.copyRight {
+  color: gray;
+  font-weight: 300;
+  font-size: 14px;
+  margin-top: 10px;
 }

@@ -614,12 +614,14 @@ footer {
 }
 
 @media screen and (max-width: 770px) {
-  /* section:not(:nth-child(6)) {
-    display: none !important;
-  } */
+
 
   nav {
     padding: 20px;
+  }
+
+  .search {
+    display: none;
   }
 
   .navBottom {
@@ -728,12 +730,14 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  section:not(:nth-child(6)) {
-    display: none !important;
-  }
+
 
   nav {
     padding: 20px;
+  }
+
+  .navTop {
+    flex-wrap: wrap;
   }
 
   .search {

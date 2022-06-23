@@ -500,10 +500,6 @@ footer {
 *** Responsive  
 ******************************/
 @media screen and (max-width: 1200px) {
-  /* section:not(:nth-child(6)) {
-    display: none !important;
-  } */
-
   nav {
     padding: 20px;
   }
@@ -565,6 +561,7 @@ footer {
     text-align: center;
     position: relative;
     top: 0;
+    flex: 1;
   }
 
   .payment {
@@ -614,8 +611,6 @@ footer {
 }
 
 @media screen and (max-width: 770px) {
-
-
   nav {
     padding: 20px;
   }
@@ -669,7 +664,7 @@ footer {
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-bottom: 450px;
+    margin-bottom: 100px;
   }
 
   .productDetails {
@@ -730,10 +725,8 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-
-
   nav {
-    padding: 20px;
+    padding: 10px !important;
   }
 
   .navTop {
@@ -776,11 +769,14 @@ footer {
     bottom: 0;
     left: 0;
     background-color: lightgray;
+    font-size: 25px;
   }
 
   .buyNow {
-    right: 0;
+    right: 15px;
     top: 0;
+    font-size: 15px;
+    height: 40px;
   }
 
   .featuresContainer {
@@ -792,6 +788,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 80px;
   }
 
   .productDetails {
@@ -849,3 +846,4 @@ footer {
     background-color: whitesmoke;
   }
 }
+
